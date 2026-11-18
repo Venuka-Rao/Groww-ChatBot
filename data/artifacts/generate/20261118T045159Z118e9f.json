@@ -1,0 +1,9 @@
+{
+  "query_id": "20261118T045159Z118e9f",
+  "intent": "answer",
+  "text": "The expense ratio for HDFC Large Cap Fund Direct Growth is 1.0, with a base expense ratio of 0.82. [HDFC Large Cap Fund Direct Growth \u2014 Groww](https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth)",
+  "citation_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+  "refusal": false,
+  "model_id": "qwen/qwen3.8-27b",
+  "source_stamp": "2026-11-16"
+}

@@ -1,0 +1,9 @@
+{
+  "query_id": "20261118T051206Z9e1be9",
+  "intent": "answer",
+  "text": "The ELSS lock-in period for HDFC ELSS Tax Saver Fund Direct Plan Growth is 3 years. [HDFC ELSS Tax Saver Fund Direct Plan Growth \u2014 Groww](https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth)",
+  "citation_url": "https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth",
+  "refusal": false,
+  "model_id": "qwen/qwen3.8-27b",
+  "source_stamp": "2026-11-18"
+}

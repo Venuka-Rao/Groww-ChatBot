@@ -1,0 +1,6 @@
+embedding_model: sentence-transformers/all-MiniLM-L6-v2
+chroma_path: data/chroma
+llm_provider: groq
+top_k: 4
+min_score: 0.35
+request_timeout_seconds: 30

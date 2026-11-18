@@ -1,0 +1,35 @@
+{
+  "query_id": "20261118T050559Z2ecf12",
+  "query": "What is the minimum SIP of HDFC Small Cap Fund?",
+  "scheme_slug": "hdfc-small-cap-fund-direct-growth",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "collection": "hdfc-all-minilm-l6-v2-20261116t153518z",
+  "hits": [
+    {
+      "chunk_id": "hdfc-small-cap-fund-direct-growth:min_sip:0",
+      "score": 0.8734,
+      "fact_type": "min_sip",
+      "source_url": "https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-small-cap-fund-direct-growth:other:8",
+      "score": 0.8063,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-small-cap-fund-direct-growth:other:16",
+      "score": 0.8052,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-small-cap-fund-direct-growth:other:4",
+      "score": 0.765,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth"
+    }
+  ],
+  "citation_url": "https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth",
+  "above_threshold": true
+}

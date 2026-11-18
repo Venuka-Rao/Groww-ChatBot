@@ -1,0 +1,9 @@
+{
+  "query_id": "20261118T050559Z2ecf12",
+  "intent": "answer",
+  "text": "The minimum SIP for HDFC Small Cap Fund Direct Growth is \u20b9100. [HDFC Small Cap Fund Direct Growth \u2014 Groww](https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth)",
+  "citation_url": "https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth",
+  "refusal": false,
+  "model_id": "qwen/qwen3.8-27b",
+  "source_stamp": "2026-11-16"
+}

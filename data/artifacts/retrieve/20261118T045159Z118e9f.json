@@ -1,0 +1,35 @@
+{
+  "query_id": "20261118T045159Z118e9f",
+  "query": "What is the expense ratio of HDFC Large Cap Fund?",
+  "scheme_slug": "hdfc-large-cap-fund-direct-growth",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "collection": "hdfc-all-minilm-l6-v2-20261116t153518z",
+  "hits": [
+    {
+      "chunk_id": "hdfc-large-cap-fund-direct-growth:expense_ratio:0",
+      "score": 0.9155,
+      "fact_type": "expense_ratio",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-large-cap-fund-direct-growth:other:8",
+      "score": 0.7861,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-large-cap-fund-direct-growth:other:4",
+      "score": 0.7804,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-large-cap-fund-direct-growth:other:1",
+      "score": 0.7785,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth"
+    }
+  ],
+  "citation_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+  "above_threshold": true
+}

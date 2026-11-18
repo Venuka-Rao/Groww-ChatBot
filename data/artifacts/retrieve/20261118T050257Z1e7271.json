@@ -1,0 +1,35 @@
+{
+  "query_id": "20261118T050257Z1e7271",
+  "query": "How do I download a capital-gains statement?",
+  "scheme_slug": "",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "collection": "hdfc-all-minilm-l6-v2-20261116t153518z",
+  "hits": [
+    {
+      "chunk_id": "hdfc-equity-savings-fund-direct-growth:other:11",
+      "score": 0.3094,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-equity-savings-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-equity-savings-fund-direct-growth:other:13",
+      "score": 0.3079,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-equity-savings-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-arbitrage-fund-direct-growth:other:11",
+      "score": 0.3057,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-arbitrage-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-bse-sensex-index-fund-direct-growth:other:0",
+      "score": 0.2957,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-bse-sensex-index-fund-direct-growth"
+    }
+  ],
+  "citation_url": "https://groww.in/mutual-funds/hdfc-equity-savings-fund-direct-growth",
+  "above_threshold": false
+}

@@ -1,0 +1,45 @@
+{
+  "run_id": "20261116T153518Z",
+  "loaded_at": "2026-11-16T15:35:27Z",
+  "successes": [
+    "hdfc-large-cap-fund-direct-growth",
+    "hdfc-equity-fund-direct-growth",
+    "hdfc-mid-cap-fund-direct-growth",
+    "hdfc-balanced-advantage-fund-direct-growth",
+    "hdfc-small-cap-fund-direct-growth",
+    "hdfc-multi-cap-fund-direct-growth",
+    "hdfc-large-mid-cap-fund-direct-growth",
+    "hdfc-focused-fund-direct-growth",
+    "hdfc-dividend-yield-fund-direct-growth",
+    "hdfc-defence-fund-direct-growth",
+    "hdfc-business-cycle-fund-direct-growth",
+    "hdfc-pharma-and-healthcare-fund-direct-growth",
+    "hdfc-transportation-and-logistics-fund-direct-growth",
+    "hdfc-nifty-50-index-fund-direct-growth",
+    "hdfc-bse-sensex-index-fund-direct-growth",
+    "hdfc-arbitrage-fund-direct-growth",
+    "hdfc-conservative-hybrid-fund-direct-growth",
+    "hdfc-equity-savings-fund-direct-growth",
+    "hdfc-liquid-fund-direct-growth",
+    "hdfc-overnight-fund-direct-growth",
+    "hdfc-money-market-fund-direct-growth"
+  ],
+  "failures": [
+    {
+      "slug": "hdfc-elss-tax-saver-fund-direct-growth",
+      "error": "HTTP 404"
+    },
+    {
+      "slug": "hdfc-aggressive-hybrid-fund-direct-growth",
+      "error": "HTTP 404"
+    },
+    {
+      "slug": "hdfc-corporate-bond-fund-direct-growth",
+      "error": "HTTP 404"
+    },
+    {
+      "slug": "hdfc-short-term-fund-direct-growth",
+      "error": "HTTP 404"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "query_id": "20261118T051956Zb66d87",
+  "query": "What is the exit load of HDFC Mid Cap Fund?",
+  "scheme_slug": "hdfc-mid-cap-fund-direct-growth",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "collection": "hdfc-all-minilm-l6-v2-20261118t050935z",
+  "hits": [
+    {
+      "chunk_id": "hdfc-mid-cap-fund-direct-growth:exit_load:0",
+      "score": 0.8866,
+      "fact_type": "exit_load",
+      "source_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-mid-cap-fund-direct-growth:other:11",
+      "score": 0.7815,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-mid-cap-fund-direct-growth:expense_ratio:0",
+      "score": 0.7688,
+      "fact_type": "expense_ratio",
+      "source_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth"
+    },
+    {
+      "chunk_id": "hdfc-mid-cap-fund-direct-growth:other:9",
+      "score": 0.7685,
+      "fact_type": "other",
+      "source_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth"
+    }
+  ],
+  "citation_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth",
+  "above_threshold": true
+}

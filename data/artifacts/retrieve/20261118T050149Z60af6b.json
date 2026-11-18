@@ -1,0 +1,10 @@
+{
+  "query_id": "20261118T050149Z60af6b",
+  "query": "What is the ELSS lock-in for HDFC ELSS Tax Saver Fund?",
+  "scheme_slug": "hdfc-elss-tax-saver-fund-direct-growth",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "collection": "hdfc-all-minilm-l6-v2-20261116t153518z",
+  "hits": [],
+  "citation_url": "",
+  "above_threshold": false
+}

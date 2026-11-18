@@ -1,0 +1,9 @@
+{
+  "query_id": "20261116T160519Za2d742",
+  "intent": "refuse_advice",
+  "text": "I can only share published facts such as expense ratio, exit load, and lock-in. I can\u2019t suggest whether to buy or sell. You can read the scheme page here: [HDFC Small Cap Fund Direct Growth \u2014 Groww](https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth).",
+  "citation_url": "https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth",
+  "refusal": true,
+  "model_id": "template",
+  "source_stamp": "2026-11-16"
+}

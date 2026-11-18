@@ -1,0 +1,9 @@
+httpx
+beautifulsoup4
+pyyaml
+python-dotenv
+chromadb
+sentence-transformers
+groq
+streamlit
+pytest
