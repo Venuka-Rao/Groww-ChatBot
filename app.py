@@ -3,10 +3,8 @@
 from pathlib import Path
 
 from fastapi import FastAPI
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from pydantic import BaseModel, Field
-
-from src.pipeline.ask import ask
 
 app = FastAPI()
 PAGE = Path(__file__).resolve().parent / "web" / "index.html"
@@ -17,13 +15,15 @@ class Question(BaseModel):
 
 
 @app.get("/")
-def home() -> FileResponse:
-    return FileResponse(PAGE)
+def home() -> HTMLResponse:
+    return HTMLResponse(PAGE.read_text(encoding="utf-8"))
 
 
 @app.post("/api/ask")
 def ask_route(body: Question):
     try:
+        from src.pipeline.ask import ask
+
         answer = ask(body.question.strip())
     except Exception as exc:
         return JSONResponse({"error": _public_error(exc)}, status_code=500)

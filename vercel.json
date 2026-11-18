@@ -4,7 +4,7 @@
     "app.py": {
       "maxDuration": 60,
       "memory": 1024,
-      "excludeFiles": "{tests/**,design/**,**/*.zip,data/chroma/**,data/artifacts/retrieve/**,data/artifacts/generate/**,.venv/**}"
+      "excludeFiles": "{tests/**,design/**,src/ui/**,src/pipeline/embed.py,src/pipeline/load.py,src/pipeline/ingest.py,**/*.zip,data/chroma/**,data/artifacts/retrieve/**,data/artifacts/generate/**,.venv/**}"
     }
   }
 }
