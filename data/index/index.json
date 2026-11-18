@@ -1,0 +1,8 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "encoder": "onnx-quantized-minilm",
+  "chunk_file": "data/artifacts/chunks/20261118T050935Z.jsonl",
+  "vector_count": 576,
+  "loaded_at": "2026-11-18T05:09:49Z",
+  "run_id": "20261118T050935Z"
+}

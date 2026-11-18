@@ -1,9 +1,7 @@
-httpx
-beautifulsoup4
+fastapi
 pyyaml
 python-dotenv
-chromadb
-sentence-transformers
 groq
-streamlit
-pytest
+numpy
+onnxruntime
+tokenizers

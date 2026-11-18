@@ -1,0 +1,7 @@
+-r requirements.txt
+httpx
+beautifulsoup4
+chromadb
+sentence-transformers
+streamlit
+pytest

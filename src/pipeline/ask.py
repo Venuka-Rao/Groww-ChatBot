@@ -170,8 +170,11 @@ def _store(
         "source_stamp": source_stamp,
     }
     path = settings.root / "data" / "artifacts" / "generate" / f"{query_id}.json"
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    except OSError:
+        pass
     return Answer(query_id, label, refusal, text, citation_url, model_id, source_stamp)
 
 

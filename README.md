@@ -16,7 +16,7 @@ The assistant does not follow links off those 25 pages, and it does not invent a
 Python 3.11 or newer. On this machine, use `py -3` because `python` may be the Windows Store stub.
 
 ```powershell
-py -3 -m pip install -r requirements.txt
+py -3 -m pip install -r requirements-local.txt
 copy .env.example .env
 ```
 
@@ -61,6 +61,23 @@ Stage files are written under `data/artifacts/`. The Chroma database is `data/ch
 
 ```powershell
 py -3 -m pytest -q
+```
+
+## Deploy on Vercel
+
+The hosted app is the page in `web/index.html` plus the FastAPI app in `app.py`. Vercel has no disk for Chroma, so that deploy searches the saved MiniLM index in `data/index/` with the ONNX model in `models/minilm/`. The local Streamlit app is unchanged and still uses Chroma.
+
+1. On Vercel, choose **Add New → Project** and import `Venuka-Rao/Groww-ChatBot`.
+2. Leave the framework as FastAPI when Vercel detects `app.py`. Root directory stays the repository root.
+3. Add environment variables:
+   - `LLM_MODEL_ID` = `qwen/qwen3.8-27b`
+   - `GROQ_API_KEY` = your Groq key
+4. Deploy. The first answer is slower because the function loads the embedding model.
+
+After a fresh ingest, rebuild the file Vercel searches before you push:
+
+```powershell
+py -3 -m src.pipeline.portable
 ```
 
 ## Known limits

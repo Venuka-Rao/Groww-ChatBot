@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HDFC scheme facts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <style>
+    :root {
+      --page: #ffffff;
+      --card: #f8f8f8;
+      --border: #e9e9eb;
+      --text: #44475b;
+      --secondary: #7c7e8c;
+      --faint: #a1a3ad;
+      --notice: #e9faf3;
+      --green: #04b488;
+    }
+    html[data-theme="dark"] {
+      --page: #060809;
+      --card: #1e2224;
+      --border: #2e2e2e;
+      --text: #f0efff;
+      --secondary: #a1a3ad;
+      --faint: #7c7e8c;
+      --notice: #0f251d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: Inter, sans-serif;
+    }
+    .theme {
+      position: fixed;
+      top: 16px;
+      right: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--secondary);
+      font-size: 13px;
+    }
+    .switch { position: relative; width: 36px; height: 20px; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider {
+      position: absolute;
+      inset: 0;
+      background: var(--border);
+      border-radius: 99px;
+      cursor: pointer;
+    }
+    .slider:before {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      top: 2px;
+      background: #ffffff;
+      border-radius: 50%;
+      transition: transform 0.15s ease;
+    }
+    .switch input:checked + .slider { background: var(--green); }
+    .switch input:checked + .slider:before { transform: translateX(16px); }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 24px 48px; }
+    .notice {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      background: var(--notice);
+      border: 1px solid rgba(4, 180, 136, 0.3);
+      border-radius: 8px;
+      padding: 10px 16px;
+      margin-bottom: 28px;
+    }
+    .notice-left { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; }
+    .dot { width: 8px; height: 8px; border-radius: 99px; background: var(--green); }
+    .notice-right { color: var(--secondary); font-size: 11px; font-weight: 500; letter-spacing: 0.04em; }
+    h1 { font-size: 24px; font-weight: 600; letter-spacing: -0.015em; margin: 0 0 8px; }
+    .intro { color: var(--secondary); font-size: 14px; line-height: 22px; margin: 0 0 28px; }
+    .label { color: var(--faint); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; margin: 0 0 10px; }
+    .examples { display: grid; gap: 8px; }
+    .examples button, .send {
+      font: inherit;
+      cursor: pointer;
+    }
+    .examples button {
+      background: var(--page);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-align: left;
+      font-size: 14px;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .examples button:hover { border-color: var(--green); background: var(--notice); }
+    .log { margin-top: 8px; }
+    .user-row { display: flex; justify-content: flex-end; margin: 18px 0 12px; }
+    .user-chip {
+      max-width: 85%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+    .answer-card {
+      background: var(--page);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 8px;
+    }
+    .answer-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+    }
+    .answer-title { font-size: 12px; font-weight: 600; }
+    .answer-tag { color: var(--faint); font-size: 11px; }
+    .answer-body { font-size: 14px; line-height: 22px; margin-bottom: 16px; white-space: pre-wrap; }
+    .source-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+    .source-label { font-size: 12px; font-weight: 500; margin-bottom: 6px; }
+    .source-box a { color: var(--green); font-size: 13px; }
+    .answer-foot {
+      border-top: 1px solid var(--border);
+      margin-top: 16px;
+      padding-top: 12px;
+      color: var(--faint);
+      font-size: 12px;
+    }
+    .plain-note { font-size: 14px; line-height: 22px; margin: 12px 0; }
+    form { display: flex; gap: 8px; margin-top: 28px; }
+    input[type="text"] {
+      flex: 1;
+      background: var(--page);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font: inherit;
+      font-size: 14px;
+    }
+    input[type="text"]:focus { outline: none; border-color: var(--green); }
+    .send {
+      background: var(--green);
+      color: #ffffff;
+      border: 0;
+      border-radius: 8px;
+      padding: 0 16px;
+      font-weight: 500;
+    }
+    .send:disabled { opacity: 0.6; cursor: default; }
+    .composer-note { color: var(--faint); font-size: 11px; text-align: center; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <label class="theme">Dark
+    <span class="switch">
+      <input id="dark" type="checkbox">
+      <span class="slider"></span>
+    </span>
+  </label>
+  <main>
+    <div class="notice">
+      <div class="notice-left"><span class="dot"></span>Facts-only. No investment advice.</div>
+      <div class="notice-right">25 HDFC DIRECT SCHEMES</div>
+    </div>
+    <h1>HDFC scheme facts</h1>
+    <p class="intro">Ask a published fact about the 25 covered HDFC direct-growth schemes on Groww, such as expense ratio, exit load, minimum SIP, lock-in, riskometer, or benchmark.</p>
+    <p class="label">SUGGESTED QUERIES</p>
+    <div class="examples" id="examples"></div>
+    <div class="log" id="log"></div>
+    <form id="composer">
+      <input id="question" type="text" maxlength="500" placeholder="Ask a published fact" autocomplete="off">
+      <button class="send" id="send" type="submit">Ask</button>
+    </form>
+    <p class="composer-note">Only official SID, KIM, and factsheet numbers are indexed. No performance comparisons or advice provided.</p>
+  </main>
+  <script>
+    const examples = [
+      "What is the expense ratio of HDFC Large Cap Fund?",
+      "What is the exit load of HDFC Mid Cap Fund?",
+      "What is the minimum SIP of HDFC Small Cap Fund?"
+    ];
+    const sourcePattern = /\n+###### Source link\n+\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)\s*$/;
+    const log = document.getElementById("log");
+    const input = document.getElementById("question");
+    const send = document.getElementById("send");
+    const dark = document.getElementById("dark");
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>"']/g, (ch) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      })[ch]);
+    }
+
+    examples.forEach((question) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.innerHTML = `<span>${escapeHtml(question)}</span><span>↗</span>`;
+      button.addEventListener("click", () => submit(question));
+      document.getElementById("examples").appendChild(button);
+    });
+
+    dark.addEventListener("change", () => {
+      document.documentElement.dataset.theme = dark.checked ? "dark" : "light";
+    });
+
+    document.getElementById("composer").addEventListener("submit", (event) => {
+      event.preventDefault();
+      submit(input.value);
+    });
+
+    function card(answer) {
+      if (answer.intent === "pii") {
+        return `<p class="plain-note">${escapeHtml(answer.text)}</p>`;
+      }
+      const match = (answer.text || "").match(sourcePattern);
+      const fact = match ? answer.text.slice(0, match.index).trim() : (answer.text || "").trim();
+      const title = answer.intent === "answer" && !answer.refusal
+        ? "Published Fact Verification"
+        : "Facts-only reply";
+      const source = match
+        ? `<div class="source-box"><div class="source-label">Source link</div><a href="${escapeHtml(match[2])}">${escapeHtml(match[1])}</a></div>`
+        : "";
+      const stamp = answer.source_stamp
+        ? `<div class="answer-foot">Last updated from sources: ${escapeHtml(answer.source_stamp)}.</div>`
+        : "";
+      return `<div class="answer-card"><div class="answer-head"><span class="answer-title">${title}</span><span class="answer-tag">Direct Growth Scheme</span></div><div class="answer-body">${escapeHtml(fact)}</div>${source}${stamp}</div>`;
+    }
+
+    async function submit(question) {
+      const cleaned = question.trim();
+      if (!cleaned || send.disabled) return;
+      input.value = "";
+      log.insertAdjacentHTML("beforeend", `<div class="user-row"><div class="user-chip">${escapeHtml(cleaned)}</div></div>`);
+      send.disabled = true;
+      try {
+        const response = await fetch("/api/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question: cleaned })
+        });
+        const payload = await response.json();
+        if (!response.ok) {
+          log.insertAdjacentHTML("beforeend", `<p class="plain-note">${escapeHtml(payload.error || "The fact lookup failed.")}</p>`);
+          return;
+        }
+        log.insertAdjacentHTML("beforeend", card(payload));
+      } catch (err) {
+        log.insertAdjacentHTML("beforeend", `<p class="plain-note">The fact lookup failed.</p>`);
+      } finally {
+        send.disabled = false;
+      }
+    }
+  </script>
+</body>
+</html>

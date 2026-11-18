@@ -6,8 +6,6 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
-import chromadb
-
 from src.config import Settings, load_settings
 
 _ENCODERS: dict = {}
@@ -44,6 +42,22 @@ def retrieve(
     encoder=None,
 ) -> Retrieval:
     settings = settings or load_settings()
+    from src.pipeline.portable import use_portable_index
+
+    if use_portable_index(settings):
+        from src.pipeline.portable import search_index
+
+        retrieval = search_index(
+            query,
+            scheme_slug,
+            query_id=query_id,
+            settings=settings,
+        )
+        _write_trace(settings.root, retrieval)
+        return retrieval
+
+    import chromadb
+
     current = _read_current(settings.root)
     if current["embedding_model"] != settings.embedding_model:
         raise ValueError("current.json embedding model does not match settings.yaml")
@@ -141,5 +155,8 @@ def _write_trace(root: Path, retrieval: Retrieval) -> None:
         "above_threshold": retrieval.above_threshold,
     }
     path = root / "data" / "artifacts" / "retrieve" / f"{retrieval.query_id}.json"
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    except OSError:
+        return
